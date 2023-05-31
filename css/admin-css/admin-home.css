@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.header {
+    background-color: #FEC260;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.header h1 {
+    font-size: 1rem;
+}
+
+.content {
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+}
+
+.content .sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #A10035;
+}
+
+.content .sidebar .icon {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+}
+
+.content .sidebar .icon h1 {
+    font-size: 3em;
+    padding-right: 15px;
+}
+
+.content .sidebar .side-links {
+    height: 60vh;
+    width: 100%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.content .sidebar .side-links a {
+    width: 100%;
+    padding: 13px;
+    transition: .3s;
+}
+
+/* .content .sidebar .side-links a::before {
+    content: '';
+    border-left: 4px solid #2A0944;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+} */
+
+.content .sidebar .side-links a:hover {
+    background-color: #2A0944;
+}
+
+.content .sidebar .side-links .first {
+    text-decoration: none;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links .first {
+    text-decoration: none;
+    top:  5%;
+    left: 0;
+    right: 0;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links .second {
+    text-decoration: none;
+    top: 15%;
+    left: 0;
+    right: 0;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links .third {
+    text-decoration: none;
+    top: 25%;
+    left: 0;
+    right: 0;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links .fourth {
+    text-decoration: none;
+    top: 35%;
+    left: 0;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links .fifth {
+    text-decoration: none;
+    top: 45%;
+    left: 0;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links .sixth {
+    text-decoration: none;
+    top: 55%;
+    left: 0;
+    color: #ddd;
+    position: absolute;
+    font-size: 1em;
+}
+
+.content .sidebar .side-links a.selected {
+    background-color: #2A0944;
+}
+
+.content .main {
+    width: 100%;
+}
+
+.content .main .links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    font-size: 1em;
+    height: 5vh;
+    width: 100%;
+    background-color: #2A0944;
+    position: relative;
+}
+
+.content .main .links .first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding:10px;
+    text-decoration: none;
+    color: #ddd;
+    transition: .3s;
+}
+
+.content .main .links .second {
+    position: absolute;
+    top: 0;
+    left: 7.5%;
+    bottom: 0;
+    padding:10px;
+    text-decoration: none;
+    color: #ddd;
+    transition: .3s;
+}
+
+.content .main .links .third {
+    position: absolute;
+    top: 0;
+    left: 16.8%;
+    bottom: 0;
+    padding:10px;
+    text-decoration: none;
+    color: #ddd;
+    transition: .3s;
+}
+
+.content .main .links .fourth {
+    position: absolute;
+    top: 0;
+    left: 24.8%;
+    bottom: 0;
+    padding:10px;
+    text-decoration: none;
+    color: #ddd;
+    transition: .3s;
+}
+
+.content .main .links a:hover {
+    background-color: #3FA796;
+}
+
+.dashboard {
+    width: 100%;
+    height: 89vh;
+    display: grid;
+    place-items: center;
+}
+
+.dashboard .dashboard-contents {
+    width: 95%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.dashboard .dashboard-contents .issued-books {
+    grid-column: 1/4;
+}
+
+.dashboard .dashboard-contents .returned-books {
+    grid-column: 1/4;
+}
+
+.dashboard .dashboard-contents .center {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.dashboard .dashboard-contents .center a {
+    text-decoration: none;
+    color: black;
+    border-radius: 0 0 10px 10px;
+    height: 100%;
+}
+
+.dashboard .dashboard-contents .center .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    background-color: #A10035;
+    color: white;
+    font-size: smaller;
+}
+
+.dashboard .dashboard-contents .center .value{
+    display: grid;
+    place-items: center;
+    font-size: 90px;
+    transition: .3s;
+    border-radius: 0 0 10px 10px;
+    height: 85%;
+}
+
+.dashboard .dashboard-contents .center .value:hover {
+    background-color: #e3e3e3;
+}

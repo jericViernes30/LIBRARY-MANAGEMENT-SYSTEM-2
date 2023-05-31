@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.login-container {
+    width: 70vw;
+    height: 61vh;
+    box-shadow:  0 5px 15px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    display: flex;
+}
+.login {
+    width: 50%;
+    height: 100%;
+    background-color: #A10035;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 4px 0 0 4px;
+    overflow: auto;
+}
+
+.login h1 {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login input {
+    width: 95%;
+    outline: none;
+    padding: 10px 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.login select {
+    width: 95%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 4px;
+}
+
+.login button {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: .3s;
+}
+
+.login button:hover {
+    background-color: #3FA796;
+    color: white;
+}
+
+.login .links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login .links a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.hero {
+    width: 50%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+}

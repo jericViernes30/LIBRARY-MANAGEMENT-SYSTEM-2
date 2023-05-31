@@ -1,0 +1,36 @@
+DASHBOARD
+CRUD BOOKS
+ISSUE BOOKS
+
+COMPLETE THE GRID, ADD SEARCH BUTTON INSIDE VIEW BOOKS, THEN USE IF STATEMENT
+
+                <?php
+                    if(mysqli_num_rows($result) > 0) {
+                            while($row = mysqli_fetch_assoc($result)) {
+                                echo "<h1>".$row['title']."</h1>";
+                            }
+                        }
+                ?>
+
+
+
+
+                <?php
+                                while($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                                <form action="update-book.php" method="POST">
+                                        <?php echo '<img src="img/'.$row['cover'].'">'?>
+                                        <p style="font-weight:bold;">ISBN: <span style="font-weight: 200;"><?php echo $row['isbn'];?></span></p>
+                                        <p style="font-weight:bold;">Author: <span style="font-weight: 200;"><?php echo $row['author'];?></span></p>
+                                        <p style="font-weight:bold;">Title: <span style="font-weight: 200;"><?php echo $row['title']?></span></p>
+                                        <p style="font-weight:bold;">Series: <span style="font-weight: 200;"><?php echo $row['series']; ?></span></p>
+                                        <p style="font-weight:bold;">Description: <span style="font-weight: 200;"><?php echo $row['description']?></span></p>
+                                        <input type="hidden" name="isbn" value="<?php $row['isbn'];?>">
+                                    <div class="buttons">
+                                        <input type="submit" name="update" value="Update">
+                                        <input type="submit" name="delete" value="Delete">
+                                    </div>
+                                </form>
+                            <?php
+                                }
+                            ?>
