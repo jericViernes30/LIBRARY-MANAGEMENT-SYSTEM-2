@@ -53,12 +53,12 @@
                         <a href="view-book.php">
                             <div class="value">
                                 <?php
-                                        $totalBooks = "SELECT COUNT(*) as total FROM books_data";
+                                        $totalBooks = "SELECT COUNT(*) as books FROM books_data";
                                         $result = mysqli_query($con, $totalBooks);
 
                                     if ($result) {
                                         $row = mysqli_fetch_assoc($result);
-                                        $totalBooks = $row["total"];
+                                        $totalBooks = $row["books"];
                                     } else {
                                         $totalBooks = 0;
                                     }
@@ -90,24 +90,41 @@
                         <div class="title">NUMBER OF FACULTY</div>
                         <div class="value">0</div>
                     </div>
+                    <div class="number-of-borrowers  center">
+                        <div class="title">NUMBER OF BORROWERS</div>
+                        <div class="value">0</div>
+                    </div>
                     <div class="issued-books  center">
                         <div class="title">ISSUED BOOKS</div>
-                        <div class="value">
+                        <div class="value-table">
                             <table>
-                                <thead style="font-size: 20px;">
-                                    <tr>
-                                        <td>Name</td>
-                                        <td>Book Title</td>
-                                        <td>Date of Borrowing</td>
-                                    </tr>
-                                </thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Book to borrow</th>
+                                    <th>Request date</th>
+                                </tr>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>The Great Gatsby</td>
+                                    <td>May 15, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Emma Brown</td>
+                                    <td>Pride and Prejudice</td>
+                                    <td>April 20, 2023</td>
+                                </tr>
+                                <tr>
+                                    <td>David Lee</td>
+                                    <td>To Kill a Mockingbird</td>
+                                    <td>June 1, 2023</td>
+                            </tr>
                             </table>
                         </div>
                     </div>
-                    <div class="returned-books  center">
+                    <!-- <div class="returned-books  center">
                         <div class="title">RETURNED BOOKS</div>
                         <div class="value">0</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
