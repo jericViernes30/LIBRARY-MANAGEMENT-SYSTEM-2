@@ -36,6 +36,11 @@
                 <a class="third" href="view-book.php">View books</a>
                 <a class="fourth" href="delete-book.php">Delete books</a>
             </div>
+            <div class="manage-container">
+                <div class="manage">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </body>

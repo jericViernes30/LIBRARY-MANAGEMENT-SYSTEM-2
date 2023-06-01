@@ -210,3 +210,15 @@ body {
 .content .sidebar .side-links a.selected {
     background-color: #2A0944;
 }
+
+.content .main .manage-container {
+    display: grid;
+    place-items: center;
+    width: 90%;
+    height: 90%;
+    background-color: #2A0944;
+}
+
+.content .main .manage {
+    outline: auto;
+}
